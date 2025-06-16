@@ -11,7 +11,7 @@ describe("person", () => {
   test("test auth", () => {
     const headers: IncomingHttpHeaders = {};
     const result = getAPIKey(headers);
-    expect(result).not.toBeNull();
+    expect(result).toBeNull();
   });
 
 });
