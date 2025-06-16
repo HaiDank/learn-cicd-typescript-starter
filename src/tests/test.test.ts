@@ -7,7 +7,7 @@ const person = {
   age: 32,
 };
 
-describe("person", () => {
+describe("Api", () => {
   test("test auth", () => {
     const headers: IncomingHttpHeaders = {};
     const result = getAPIKey(headers);
