@@ -13,5 +13,4 @@ describe("Api", () => {
     const result = getAPIKey(headers);
     expect(result).toBeNull();
   });
-
 });
