@@ -41,4 +41,4 @@ jobs:
         run: 'gcloud info'
       
       - name: Build docker image & push to artifact registry
-        run: gcloud build submit --tag us-central1-docker.pkg.dev/avian-altar-463314-h3/notely-ar-repo/notely:latest
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/avian-altar-463314-h3/notely-ar-repo/notely:latest
