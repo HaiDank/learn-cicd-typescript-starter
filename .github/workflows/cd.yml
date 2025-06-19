@@ -26,3 +26,19 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+        with:
+          version: '>= 363.0.0'
+
+      - name: 'Use gcloud CLI'
+        run: 'gcloud info'
+      
+      - name: Build docker image & push to artifact registry
+        run: gcloud build submit --tag us-central1-docker.pkg.dev/avian-altar-463314-h3/notely-ar-repo/notely:latest
